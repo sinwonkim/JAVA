@@ -1,0 +1,89 @@
+필드의 구분 
+클래스의 필드란 클래스에 포함된 변수를 의미 
+클래스 내에서 필드는 선언된 위치에 따라 다음과 같이 구분됨
+
+1.클래스 변수 (static variable)
+2.인스턴스 변수(instance variable)
+3.지역 변수(local variable)
+
+ex)
+class Car {
+  static int var; // 클래스 변수(static variable)
+  String name; // 인스턴스 변수 
+
+  void method(){
+    int something = 10; //지역 변수(local variable)
+  }
+}
+
+클래스 변수와 인스턴스 변수는 초기화를 하지 않아도 변수의 타입에 맞게 자동으로 초기화 될 것이다.
+하지만 지역 변수는 사용하기 전에 초기화하지 않으면, 자바 컴파일러가 오류를 발생시킴
+
+클래스 변수와 인스턴스 변수 
+클래스 영역에 위치한 변수 중에서 static 키워드를 가지는 변수를 클래스 변수(static variable)라고 한다.
+그리고 클래스 영역에 위치한 변수 중 static 키워드를 가지지 않는 변수는 인스턴스 변수 (instance variable)라고 한다.
+또한,메소드나 생성자,초기화 블록내에 위치한 변수를 지역변수(local variable)라고 한다.
+
+
+클래스변수     사용방법    -    클래스이름.변수이름
+인스턴스 변수   사용방법    -   인스턴스이름.변수이름
+지역 변수       사용방법   -    변수이름
+
+클래스 변수는 인스턴스를 생성하지 않고도 바로 사용할 수 있다.
+따라서 이러한 클래스 변수를 공유변수(shared variable)라고도 한다.
+
+이러한 클래스 변수는 해당 클래스의 모든 인스턴스가 공유해야 하는 값을 유지하기 위해 사용됨
+반면에 인스턴스 변수는 인스턴스마다 가져야 하는 고유한 값을 유지하기 위해 사용됨
+
+ex)
+class Field {
+  static int classVar = 10; // 클래스 변수 선언
+  int instanceVar = 20; // 인스턴스 변수 선언
+}
+
+public class Member01 {
+  public static void main(String[] args){
+    int var = 30; // 지역변수선언
+    System.out.println(var +"\n");// 지역 변수 참조 
+  
+    Field  myField1 = new Field(); // 인스턴스 생성
+    Field  myField2 = new Field(); // 인스턴스 생성
+  
+    System.out.println(Field.classVar); // 클래스 변수 참조   인스턴스 생성안하고 참조 가능한거지.
+    System.out.println(myField1.instancevAR); // 인스턴스 변수 참조    인스턴스 변수 참조하려고 인스턴스 생성해서 접근했지
+  }
+{
+
+클래스 변수는 생성된 모든 인스턴스가 같은 값을 공유함
+BUT 인스턴스 변수는 각 인스턴스마다 고유한 값을 가짐
+
+메소드의 구분 
+클래스의 메소드란 어떠한 작업을 수행하기 위한 명령문의 집합
+클래스 내에서 메소드는 static 키워드의 여부에 따라 다음과 같이 구분됨
+
+1.클래스 메소드(static method)
+2.인스턴스 메소드(instance method)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+이 내용은 tcp 스쿨을 보고  정리 목적으로 작성한 내용입니다.
+
