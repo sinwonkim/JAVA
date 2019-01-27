@@ -1,0 +1,39 @@
+삼항 연산자 
+
+조건      ?     수1 :    수 2
+true or false   true    false 시 
+
+
+switch(조건) {
+
+case 1: 
+  케이스 1이 조건에 맞을시 실행
+  break;
+case 2: 
+  케이스 2이 조건에 맞을시 실행
+  break;
+case 3:
+  케이스 3이 조건에 맞을시 실행
+  break;
+default:
+  해당하는 case 없으면 여기부터 실행
+  break;
+  
+}
+
+# while문 
+
+class whileBasic {
+public static void main(String[] args) {   
+    int i = 0;
+    int total = 0;
+    
+    whiel(i <= 5) {
+      total += i;
+      i++;
+    }
+    System.out.println("1부터 4까지의 합은? " + total +" 입니다.");
+}
+}
+result
+1부터 4까지의 합은? 10 입니다.
