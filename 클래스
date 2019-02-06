@@ -1,0 +1,78 @@
+java 입문서적에는 대부분 class는 설계도, object는 사물 또는 개념 
+
+ex)노트북은 모두다 디자인이 다르고, 성능또한 다름 
+하지만 노트북의 모델이 정해지면 똑같은 성능으로 계속 만듬 
+그러면 노트북을 생산할 수 있는 공장이 필요하겠지?
+
+바로 공장이 class라고 생각하면 됨 
+
+그리고 그 공장에서 나온 노트북은 객체라고 생각하면 됨
+예를 들어 
+
+노트북을 만들려는 성능 
+
+cpu:i5 (음 내꺼도 i5 코어인데.. i7으로 업글하고 싶다 )
+ram:16
+vga: gtx 950 
+
+이렇게 부품이 있다면 이것을 공장에 넣어서 만들면 노트북이
+완성 되겠지?
+
+그러면 이제 코드로 위의 부품 3개만 넣으면 노트북이 만들어진다고 
+가정하고 class를 만들어 봄 
+
+public class NetBook {
+	String cpu;
+	int ram;
+	String vga;
+
+	//NetBook 변수들에게 값을 넣어줄 메소드
+	public void setSpecification(String a, int b, String c) {
+	cpu = a;
+	ram = b;
+	vag = c;
+	}
+
+	//NetBook 변수들에게 넣어준 값을 콘솔에 출력해줄 메소드 
+	public void NetBookSpecification() {
+		System.out.println("cpu는 "+cpu+"ram는 "+ram+"vga는"+vga);
+	}
+}
+
+이렇게 class를 만듬  이렇게 만들어 놓으면 계속해서 사용할 수 있음 
+노트북의 사양을 바꿔서 계속해서 사용할 수 있는 공장이 만들어짐 
+
+그럼 노트북 공장을 사용해서 노트북좀 만들어 볼까나
+
+public class useNoteBookFactory{
+	
+	public static void main(String[] args) {
+	
+	NetBook MyNetBook = NetBook(); //MyNetBook참조변수 선언 후 NetBook에 대한 객체 생성
+	MyNetBook.SetSpecification("i7",8,"900X5T"); //MyNetBook에 메소드 사용해서 노트북을 제조할 값을 넣어줌 아..내꺼 노북현재 사양.. 하 메모리가 8기가다 
+	}
+}
+
+이렇게 노트북 공장 하나 만들어 놓고  참조 변수 선언후 NetBook에 대한 객체 선언후 
+SetSpecification 메소드를 사용해서  다른 사양을 넣어서 제조하면 됨 
+
+클래스를 만들고 사용하기 위해서는 반드시 해당 클래스에 대한 객체를  생성해 주어야함 
+객체 멀로 생성하지? new 라는 키워드 사용해서 만들면 되지 그리고 클래스의 객체를 생성해 주고 그걸 참조할 참조변수를 정해줘서 
+참조해서 사용하면 됨 이건 참조할 주소 라고 표현하는 글도 많음  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+개인적으로 공부하려고 작성한 글 입니다. 주요 내용의 참조는 
+https://bvc12.tistory.com/154?category=551930 
+여기서 했습니다. 
