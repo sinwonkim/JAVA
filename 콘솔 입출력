@@ -1,0 +1,58 @@
+Sytem.in은 InputStream의 객체이다.
+
+InputStream in = System.in;
+
+InputStream의 read메소드는 1byte의 사용자의 입력을 받아들임
+
+int a;
+a = in.read();
+
+프로그래밍에서는 다음과 같은 것들을 스트림이라고 할 수 있다.
+- 파일 데이터(파일은 그 시작과 끝이 있는 데이터 스트림)
+- HTTP 응답 데이터(브라우저가 요청하고 서버가 응답하는 HTTP 응답데이터)
+-키보드 입력(사용자가 키보드로 입력하는 문자열은 스트림)
+
+바이트 대신 문자로 입력 스트림을 읽으려면 InputStreamReader를 사용하면 됨
+
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+public class StreamTest {
+	public static void main(String[] args) throws Exception {
+		InputStream in = System.in;
+		InputStreamReader reader = new InputStreamReader(in);
+		char[] a = new char[3];
+		reader.read(a);
+
+
+	}
+
+}
+
+
+
+}
+
+
+
+}
+
+사용자가 엔터키를 입력할 때까지 사용자의 입력을 전부 받아들이기
+
+BufferedReader를 이용하면 가능 
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+public class StreamTest {
+	public static void main(String[] args) throws Exception {
+	 	InputStream in = System.in;
+		InputStreamReader reader = new InputStreamReader(in);
+		BufferedReader br = new BufferedReader(reader);
+
+		String a = br.readLine();
+		System.out.println(a);
+
+	}
+}

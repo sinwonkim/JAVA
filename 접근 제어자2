@@ -1,0 +1,48 @@
+자바는 객체지향 언어이다.
+public ,protected,default,private
+
+public (일반적 모든 메서드 앞에 명시함 )
+클래스도 시작할떄 거의 public으로 시작하군..
+
+public leageOfL (읍 ..여기까지)
+
+protected는 상속관계까지만 허용 
+상속? 유산 상속....?!!?!??! (크흠 )
+
+default는 객체내부, 동일한 패키지에서 사용이 가능함
+
+private 객체내부에서만 사용이 가능함
+(일반적으로 모든 멤버변수 앞에 명시)
+ex)이건 음 겟셋 DTO쪽에나 VO쪽에 겟,셋 메소드 사용해서 활용
+
+public class characters {
+	private String vein;
+	
+	public void getVein() {
+	return "";
+	}
+	
+	public String setVein(String adios) {
+	this.vein  =  adios
+	}
+
+}
+
+접근 영역 public > protected > default > private
+
+결론: 4가지의 권한(접근제한자)로 상황에 맞게 사용하고 
+은닉성을 부여해준다.
+
+
+
+
+
+
+
+
+
+
+본 글을 보고 개인적으로 공부하려는 내용을 정리한 내용입니다 본 글에 제가 생각하는 점을 
+덧 붙여 보았습니다. 
+출처 
+https://bvc12.tistory.com/139?category=551930    
