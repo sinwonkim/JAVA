@@ -1,0 +1,44 @@
+제네릭 
+
+api를 사용하려고 하면  <> 이런 문구가 나옴 
+<> 다이아몬드 연산자라고 함  
+
+class test<T>{
+	public  T  aaa; // 생성자
+ }
+/*
+*
+*/
+public class hello {
+
+	public static void mian(String[] args) {
+	test<String> bbb = new test<String>();
+	bbb.aaa =  "작성자 좋다";
+	System.out.println(bbb.aaa);
+	}
+}
+다이아몬드 연산자에 넣어주는 타입으로 생성이 됨 
+int,String  등등 
+결론: 데이터 타입을 마음대로 사용할 수 있는 것임 
+와!!!!!!!!1wowowowowowowowowowo omg 
+
+콘솔창 체크 해보면 
+작성자 좋다  로 이렇게 문자열이 출력된 결론 이건 String 타입 
+
+api를 사용하려면 대부분? 변수를 지정해 주어야 함 
+
+
+
+
+
+
+
+
+
+
+
+
+
+이 내용은 본 저작자의 주소 입니다.
+출처: https://bvc12.tistory.com/134?category=551930
+보고 개인적으로 공부한 내용을 정리하고자 작성한 글 입니다.  
