@@ -1,0 +1,24 @@
+자바빈(JavaBean)이란 JavaBean규격서에 따라 작성된
+자바 클래스를 말함 
+프로그래머가 JSP페이지에 자바코드를 작성하면 디자이너 
+입장에서는 해석하기 힘들어짐 Why?
+JSP페이지는  JSP기술에서 웹 어플리케이션을 구현할 떄 
+작성하는 코드. JSP페이지는 HTML문서의 사이에
+JSP 문법의 코드가 삽입되는 형태로 작성됨 
+
+JSP페이지에 있는 HTML코드는 웹 브라우저에 그대로 전송 되지만
+JSP문법의 코드는 웹 컨테이너 쪽에서 실행되고 그 결과만 
+웹 브라우저로 전송됨  웹 컨테이너는 JSP와 서블릿을 실행시켜주는 컨테이너로 톰캣, 제티, GlassFish등
+
+Tomcat은 JSP환경을 포함하고 있는 Servlet 컨테이너 
+Servlet과 jsp를 이용하여 로직을 처리한다. 
+웹서버와 WAS는 이처럼 동적데이터를 처리해주는 
+웹 컨테이너의 유무차이라고 봄 
+
+WAS = 웹 서버 + 웹 컨테이너 
+
+WAS(ep Application Server)
+	
+	Web Server		Web Container 
+Client ->     Container로 전송    ->  JSP,Servlet 
+
