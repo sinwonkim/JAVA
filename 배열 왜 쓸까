@@ -80,4 +80,45 @@ String[] lolC = {""}
 
 2번째 타입[] 변수명이름 = {"","",""}; 이 방식은 하드코딩 할떄 쓴다고 한다 음.. 의외다 
 
+리스트는 배열과 비슷함 
+만들어진 이유? 배열의 한계떄문에 만들어짐 
+배열의 한계는 무엇일까?
+배열같은 경우 만들때
+ex)자바
+1번 방식
+String[] asd= new String[5];
+asd[0] ="스트링 형태로";
+
+2번 방식
+String[] ppt = {"가","나","다"};
+
+List는 메모리가 허용하는 한 계속해서 추가할 수 있다.
+
+List활용 ex)
+package List;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ArrayListEx {
+
+	public static void main(String[] args) {
+
+		 List<String> LeageC = new ArrayList<String>();
+
+		 LeageC.add("탑 스오");
+		 LeageC.add("미드 아리");
+		 LeageC.add("봇 베인");
+		 LeageC.add("서폿 룰루");
+		 LeageC.add("정글 짜오");
+		 LeageC.set(1, "미드 루시안");//index 1번 아리를 변경 
+		 LeageC.remove(2); // index 2번 베인 삭제 
+		 
+		 for(String data:LeageC) {  // Enhanced for 문 
+			 System.out.println(data); // 콘솔 출력
+		 }
+		 System.out.println("리스트 출력"+LeageC.toString()); 
+	}
+}
+
 
