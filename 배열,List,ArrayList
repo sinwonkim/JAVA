@@ -114,7 +114,8 @@ public class ArrayListEx {
 		 LeageC.set(1, "미드 루시안");//index 1번 아리를 변경 
 		 LeageC.remove(2); // index 2번 베인 삭제 
 		 
-		 for(String data:LeageC) {  // Enhanced for 문 
+		 for(String data:LeageC) { // 대입받을 변수정의 :배열     Enhanced for
+		 			    
 			 System.out.println(data); // 콘솔 출력
 		 }
 		 System.out.println("리스트 출력"+LeageC.toString()); 
