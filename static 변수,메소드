@@ -1,0 +1,41 @@
+정적변수,정적 메소드 (static)
+
+언제 쓰는 것일까?
+
+첫번쨰로는 항상 같은 것을 여기~저기 ~에서 쓰려고 할떄
+ex)변수를 만드록 그 값을 아무곳에서나 쓸 수 있다면 
+    한번만 만들면 되겠지
+   
+    두번쨰로는 사용하고 있는 상태 그대로를 아무곳에서나 
+    접근할 수 있다는 것 
+
+
+public class Java20 {
+	
+	public static void main(String[] args) {
+		staticTest.a = 3;
+		staticTest.staticTest();
+		
+	}
+}
+
+class staticTest {
+   static int a = 0;
+   public static void staticTest() {
+	System.out.println(a)
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+출처
+https://bvc12.tistory.com/178?category=551930
