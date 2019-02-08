@@ -1,0 +1,57 @@
+익명클래스(Anonymous Class) 
+익명클래스는 이름없는 클래스 
+클래스를 만들어서 인스턴스(클래스를 생성하여 사용하는것)하여 사용하잖아요?
+
+test2 a = new test2();
+근데 앞에 형식과 클래스 명칭을 정해주는 것을 뺴면 
+바로 그게 익명 클래스 
+
+new test2(); 
+이렇게 생성만 하여 사용하는 것이다.
+이렇게 생성만 하여 사용하기 떄문에 당연히 명칭이 없다.
+명칭이 없기 떄문에 만들어진것을 불러서 사용할수가 없다.
+
+결론은 1회성으로 생성하여 사용하는 것 
+
+ex)
+
+public class test25  {
+
+	publci static void main(String[] args) {
+	test2 A = new test2();	
+	A.setCB(new test1());
+	}
+}
+
+class test1 {
+	int a = 0;
+	int b = 0;
+
+	public test1() {
+	a = 3;
+	b = 4;
+	}
+}
+
+class test2{
+	int c = 0;
+	int d = 0;
+
+	test2(test1 o) {
+	c = o.a
+	d = 0.b
+	}
+	
+	public void printCB() {
+	System.out.println(c + d);
+	}
+}
+
+
+
+
+
+
+
+
+출처 https://bvc12.tistory.com/184?category=551930
