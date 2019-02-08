@@ -80,3 +80,7 @@ public class interfaceR implements interfaceM {
 result 
 인터페이스를 상속받아 메소드를 오버라이드를 통해 실제적으로 구현함
 
+
+
+
+기본 내용 출처:https://bvc12.tistory.com/182?category=551930
