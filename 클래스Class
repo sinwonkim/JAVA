@@ -1,0 +1,81 @@
+자바에서는 객체를 New 연산자로 선언하고 생성한다.
+public static void main(String[] args) {
+	Class 타입 변수명 = new Class();
+	변수명.age = 3;
+	변수명.classLevel = 6;
+	변수명.number = 17;
+}
+
+
+new Class(); 익명함수
+
+class Student {
+	int age;
+	int number;
+	int classLevel;
+}
+
+객체 생성 과정 
+1.new 연산자가 s객체에 저장될 메모리 공간 할당
+2.생성자가 s객체를 초기화
+3.new 연산자가 새로 생성된 객체의 주소(referenece) 변수에 저장
+4.변수를 통해 접근 
+
+객체란?
+객체(Ojbect)는 상태(변수)와 동작(메소드로 표현)을 가지고 있다.
+객체의 상태(state)는 객체의 특징값(속성)이다.
+객체의 동작(behavior)또는 행동은 객체가 취할 수 있는 동작
+
+클래스 
+클래스Class:객체를 만드는 설계도
+클래스로부터 만들어지는 각각의 객체를 그 클래스의 인스턴스라고 한다.
+
+도면=클래스 -> 제품 =객체
+class    		object
+
+
+객체는 클래스라는 설계도로 생성된다.
+
+ex)
+
+package classEx;
+
+import java.util.Scanner;
+
+public class ClassStudy {
+	static int currentSpeedM;
+	
+	public static void main(String[] args) {
+		CarClass carclass = new CarClass(); // CarClass 클래스를 new연산자 사용해서 객체를 만들고 있다.
+			 
+		 currentSpeedM = carclass.speedUp();
+		 currentSpeedM = carclass.speedDown();
+		 
+		System.out.println("현재 속도는 "+currentSpeedM+"km/h 입니다.");
+	
+	}
+}
+
+// 설계도 역할을 하는 클래스    난 자동차 클래스를 만들어 거기에 속성 값으로 currentSpeed 선언 , 행동으론 스피드 up,down 메소드를 만들어 사용 
+class CarClass{
+	 
+	int currentSpeed; // 현재속도
+	
+	// 속도 증가시키는 동작
+	public int speedUp() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("증가할 속도를 입력하세요");
+		int a = scanner.nextInt();		
+		currentSpeed += a;		
+		return currentSpeed;
+	}
+	
+	public int speedDown() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("감속할 속도를 입력하세요");
+		int a = scanner.nextInt();
+		currentSpeed -= a;
+		return currentSpeed;
+	}
+}
+
