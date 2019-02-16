@@ -12,10 +12,7 @@ public class starInput {
 		작성된 토큰은, 다양한 next 메서드를 사용해, 다른 형태의
 		값으로 변환할 수 있다.
 		*/	
-		
-	
-		
-		
+			
 		/*별표를 입력받아 ---  java.util.Scanner 클래스 활용
 		 *내가 입력할때의 값은 숫자로 입력하겠지 그러면 그걸 통해서 반복을 통해 별을 만들어야 한다.   
 		 *별(오각형)을 만든다.
@@ -25,14 +22,6 @@ public class starInput {
 /*		Scanner scanner = new Scanner(System.in);
 		System.out.println("무언가를 입력하세요");
 		int number  = scanner.nextInt();
-		
-		for(int i = 0; i <= number; i++) {
-			for(int j = 0; j < i; j++) {
-				System.out.print("*");
-			}
-			System.out.println();
-			
-		}*/
 		
 		/*for(int i = 0 ; i<5; i++ ) {
 			for(int j = 0; j<i; j++) {
@@ -48,10 +37,20 @@ public class starInput {
 		 * "조건식이 true일 떄 실행될 실행문"
 		 * }
 		 */
+		
+		 //위에 삼각형 
 		 Scanner scan =  new Scanner(System.in);
 		 System.out.println("숫자를 입력하세요");
 		 int x = scan.nextInt();
-		
+		 if(x==1) {
+			x = x+9;
+		 }
+		 if(x==2) {
+			 x =x +7;
+		 }
+		 if(x==3) {
+			 x= x+6;
+		 }
 		 for(int i = 0; i<x; i++) {	 
 			 for(int e = 0; e<(x*2)-i; e++) {
 				 System.out.print(" ");
@@ -61,10 +60,8 @@ public class starInput {
 			}		 
 			System.out.println();
 		 }
-		 //위에 삼각형 만들기 끝 
-		 
-		 
-		 
+			 
+			// 중간 몸통
 		 for(int s=0 ; s<x; s++) {
 			 for(int el=0; el<s; el++) {
 				 System.out.print(" ");
@@ -81,9 +78,7 @@ public class starInput {
 			 }
 		
 		 }	
-
-		// 중간 몸통
-		 
+ 
 		 for(int b=0; b<x; b++) {
 			 for(int el=0; el<x-b; el++) {
 				 System.out.print(" ");
@@ -99,7 +94,6 @@ public class starInput {
 				 System.out.print("*");
 			 }		
 			 System.out.println(); 
-		 }
-		 	
+		 }	 	
 		}
 }
