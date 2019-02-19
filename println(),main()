@@ -1,0 +1,27 @@
+실제로 out은 System클래스 내에 다음과 같이 선언된 클래스 
+변수이다.
+
+public final class System extends Object {
+	public static final PrintStream out; // 참조변수 out
+}
+
+println은 PrintStream 클래스의 인스턴스 메소드이다.
+
+System.out.println();
+
+System에 위치한 클래스 변수 out이 참조하는 인스턴스의 println 메소드를 호출하는 문장
+
+main 메소드가 public이고 static인 이유는?
+
+main 메소드는 반드시 다음의 모양새를 갖추어야 한다.
+
+public static void main(String[] args){
+   .....
+}
+
+main 메소드의 호출이 이뤄지는 영역은 클래스 외부이다. 따라서 public으로 선언하는 것이 타당함을 알 수 있다. 
+
+그리고 main 메소드는 인스턴스가 생성되기 이전에 호출된다. 
+
+따라서 static 선언하는 것이 옳음을 알 수 있다. 
+
