@@ -1,0 +1,78 @@
+프로토타입 패턴은 소프트웨어 디자인 패턴 용어로,
+생성할 객체들의 타입이 프로토타입인 인스턴스로부터 
+결정되도록 하며, 인스턴스는 새 객체를 만들기 위해
+자신을 복제(clone)하게 된다.
+프로토타입 패턴은 새로운 객체는 일반적인 방법
+(예를 들어, new를 사용해서라든지)으로 객체를 생성(create)
+하는 고유의 비용이 주어진 응용 프로그램 상황이 있어서
+불가피하게 매우 클 떄, 이비용을 감내하지 않을 수 있게 해준다.
+
+패턴을 구현하려면 우선 clone() 메소드를 선언하는 추상 
+베이스를 하나 만든다. 다형적 생성자(polymorphic constructor)
+기능이 필요한 클래스가 있다면 , 그것을 앞에서 만든 
+클래스를 상속받게 한 후, clone() 메소드 내의 코드를 구현한다.
+
+new 를 이용해 객체를 생성했다면, 새로이 생성된 객체의 
+애트리뷰트들은 초기값을 가질 것이다. 
+
+예를들면, 은행 계좌 입출금 트랜잭션을 수행하는 시스템을
+가정해보자. 프로그래머는 은행이용자의 계좌 정보를 
+갖고 있는 객체를 하나 복사한다. 그 객체를 가지고 
+그 객체 상에다 은행 입출금 트랜잭션을 수행한다.
+그 다음 원래의 객체를 이 객체로 바꿔 치기한다. 
+프로그래머는 이런 경우 new 대신 clone을 쓴다.
+
+
+ex)
+
+package inheritance;
+
+public class AccountBank {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Account  aAccount = new Account();
+		
+		aAccount.setMoney(500);
+		System.out.println("객체 생성후 Money : "+aAccount.money);
+		Account  bAccount = new Account();
+		System.out.println("new 사용 했을시 Money : "+bAccount.money);
+		Account bAccount1 = (Account)aAccount.clone();
+		System.out.println("clone 사용 했을시 Money : "+bAccount1.money);
+	}
+
+}
+
+
+-------------------------------------------------------------------
+package inheritance;
+
+public class Account implements Cloneable{
+
+	int money;
+	int totalMoney;
+
+
+	
+	public void setMoney(int money) {
+		this.money = money;
+	}
+	
+	public Object clone(){ 
+		Object obj = null;
+		try{
+			obj = super.clone(); 
+		}
+		catch(Exception e){}
+		return obj; 
+		}
+
+	
+
+}
+결과 값 
+------------------------------------------------------------------
+객체 생성후 Money : 500
+new 사용 했을시 Money : 0
+clone 사용 했을시 Money : 500
+
