@@ -1,0 +1,44 @@
+사용자 정의 자료형 
+예를 들어 다음과 같이 Animal이라는 클래스를 만들면,
+
+class Animal {
+}
+다음과 같이 Animal 자료형 변수를 만들 수 있다.
+Animal cat;
+cat이라는 변수는 Animal 자료형 변수이다. 
+cat이라는 변수에는 Animal 자료형에 해당되는 값만 담을 수 있다.
+
+Stirng 자료형에는 몇가지 유용한 메소드들이 있다.
+
+equals는 두개의 문자열이 동일한 값을 가지고 있는지를 비교하여 결과값을
+리턴한다.
+
+String a = "hello";
+String b = "java";
+System.our.println(a.equals(b)); / false
+문자열의 값을 비교할떄는 반드시 equals를 사용해야한다.
+
+String b = new String("hello");
+Sytem.out.println(a.equals(b));
+문자열  a와 b는 모두 "hello"로 같은 값이지만 equals를 호출했을 떄는 
+true를 ==연산자를 이용했을떄는 false를 리턴한다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+원본 글 https://wikidocs.net/206
