@@ -1,4 +1,4 @@
-package javajava;
+package DataType;
 
 public class DataType {
 	//모든 타입에는 type이 있으며, 타입에 따라 저장할 수 있는 값의 종류와 범위가 달라진다. 
