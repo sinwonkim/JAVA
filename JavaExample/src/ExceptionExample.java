@@ -12,7 +12,7 @@ public class ExceptionExample {
 		}
 	}
 		
-		public static void findCl() throws ClassNotFoundException{
+		public static void findCl() throws ClassNotFoundException {
 			Class clazz = Class.forName("asdasd");
 		}
 	}
